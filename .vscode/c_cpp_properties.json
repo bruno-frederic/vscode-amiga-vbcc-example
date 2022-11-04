@@ -1,0 +1,34 @@
+{
+    "configurations": [
+        {
+            "name": "VC+aos68k",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/bin/targets/m68k-amigaos/include",
+                "${workspaceFolder}/bin/NDK3.2R4/Include_H"
+            ],
+            // This file isn't included in the real build (done by Cygwin make), but it
+            // affects how VSCode-cpptools parses the source.
+            "forcedInclude": ["${workspaceFolder}/.vscode/supress-warnings.h"],
+            "defines": [
+                "__VBCC__",
+                "__STDC__=1L",
+                "__STDC_VERSION__=199901L",
+                "__reg(x)=",
+                "__asm(x)=",
+                "__regsused(x)=",
+                "__stdargs",
+                "__amigainterrupt=",
+                "__chip=",
+                "__AMIGADATE__=__DATE__",
+                "__M68000",
+                "__M68K__"
+            ],
+            "cStandard": "c99",
+            "cppStandard": "c++98",
+            "intelliSenseMode": "clang-arm",
+            "compilerPath": ""
+        }
+    ],
+    "version": 4
+}
