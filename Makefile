@@ -8,6 +8,7 @@ ODIR=build-vbcc
 EXE=uae/dh0/hello
 _OBJ = hello.o mul_by_ten.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+UAE_CACHE_FILE=bin/configuration.cache bin/winuaebootlog.txt bin/default.uss bin/winuae_*.dmp
 
 # Prepare variables for target 'clean'
 ifeq ($(OS),Windows_NT)
@@ -34,3 +35,4 @@ $(ODIR)/%.o : %.s
 clean:
 	-$(RM) $(ODIR)$(PATHSEP)*.o
 	-$(RM) $(subst /,$(PATHSEP),$(EXE))
+	-$(RM) $(subst /,$(PATHSEP),$(UAE_CACHE_FILE))
