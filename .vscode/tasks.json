@@ -74,7 +74,8 @@
                     }
                 },
                 "command": "export PATH=$VBCC:$PATH; make clean"
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
