@@ -75,6 +75,7 @@
                 "quickstart=a500,1",
                 "-s",
                 "filesystem=rw,dh0:${workspaceFolder}\\uae\\dh0",
+//                "floppy0=${workspaceFolder}\\uae\\${workspaceFolderBasename}.adf",
                 "-s",
                 "debugging_trigger=SYS:hello",
                 "-s",
