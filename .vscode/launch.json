@@ -69,16 +69,22 @@
             "emulatorStartDelay": 1500,
             "emulator": "${workspaceFolder}/bin/winuae.exe",
             "emulatorWorkingDir": "${workspaceFolder}/bin",
-            "program": "${workspaceFolder}/uae/dh0/hello",
+            "program": "${workspaceFolder}/uae/dh0/Avalanche",
             "options": [
                 "-s",
                 "quickstart=a500,1",
                 "-s",
-                "filesystem=rw,dh0:${workspaceFolder}\\uae\\dh0",
+                "filesystem2=rw,dh0:dh0:${workspaceFolder}\\uae\\dh0,-128",
                 "-s",
-                "debugging_trigger=SYS:hello",
+                "debugging_trigger=DH0:Avalanche",
                 "-s",
-                "debugging_features=gdbserver"
+                "debugging_features=gdbserver",
+                "-s", "kickstart_rom_file=ROMs/Kickstart v3.2.1 CDTVA500A600A2000.47.102.rom",
+                "-s", "hardfile2=rw,:/Utils/WinUAE/Hard Disk/CompactFlash_AmigaOS_3.2.1_en_2022-mar.hdf,0,0,0,512,1,,uae0",
+                "-s", "chipmem_size=2",
+                "-s", "bogomem_size=2",
+                "-s", "fastmem_size=8",
+                "-s", "cpu_speed=max"
             ],
             "preLaunchTask": "Build"
         }
